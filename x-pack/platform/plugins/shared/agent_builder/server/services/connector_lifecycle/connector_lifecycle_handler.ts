@@ -18,16 +18,26 @@ import type {
   ConnectorLifecyclePostCreateParams,
   ConnectorLifecyclePostDeleteParams,
 } from '@kbn/actions-plugin/server';
+import type { KibanaRequest } from '@kbn/core-http-server';
 import type { WorkflowsServerPluginSetup } from '@kbn/workflows-management-plugin/server';
+import type { SmlIndexAction } from '../sml';
 import type { ServiceManager } from '..';
 
 const TEMPLATE_DELIMITERS: OpeningAndClosingTags = ['<%=', '%>'];
 const CONNECTOR_TAG_PREFIX = 'connector:';
 
+type SmlIndexAttachmentFn = (params: {
+  request: KibanaRequest;
+  originId: string;
+  attachmentType: string;
+  action: SmlIndexAction;
+}) => Promise<void>;
+
 interface ConnectorLifecycleHandlerDeps {
   serviceManager: ServiceManager;
   workflowsManagement?: WorkflowsServerPluginSetup;
   logger: Logger;
+  smlIndexAttachment?: SmlIndexAttachmentFn;
 }
 
 function renderWorkflowTemplate(
@@ -50,7 +60,7 @@ function slugify(input: string): string {
 }
 
 export function createConnectorLifecycleHandler(deps: ConnectorLifecycleHandlerDeps) {
-  const { serviceManager, workflowsManagement, logger } = deps;
+  const { serviceManager, workflowsManagement, logger, smlIndexAttachment } = deps;
 
   return {
     async onPostCreate(params: ConnectorLifecyclePostCreateParams): Promise<void> {
@@ -159,6 +169,25 @@ export function createConnectorLifecycleHandler(deps: ConnectorLifecycleHandlerD
             }
           })
         );
+
+        // Index the connector into SML for immediate discoverability
+        if (smlIndexAttachment) {
+          try {
+            await smlIndexAttachment({
+              request,
+              originId: connectorId,
+              attachmentType: 'connector',
+              action: 'create',
+            });
+            logger.info(`Connector lifecycle: indexed connector ${connectorId} into SML`);
+          } catch (smlError) {
+            logger.warn(
+              `Connector lifecycle: failed to index connector ${connectorId} into SML: ${
+                (smlError as Error).message
+              }`
+            );
+          }
+        }
       } catch (error) {
         logger.error(
           `Connector lifecycle: failed to create workflows/tools for connector ${connectorId}: ${error.message}`
@@ -213,6 +242,25 @@ export function createConnectorLifecycleHandler(deps: ConnectorLifecycleHandlerD
             : Promise.resolve();
 
         await Promise.all([deleteToolsPromise, deleteWorkflowsPromise]);
+
+        // Remove the connector from SML
+        if (smlIndexAttachment) {
+          try {
+            await smlIndexAttachment({
+              request,
+              originId: connectorId,
+              attachmentType: 'connector',
+              action: 'delete',
+            });
+            logger.info(`Connector lifecycle: removed connector ${connectorId} from SML`);
+          } catch (smlError) {
+            logger.warn(
+              `Connector lifecycle: failed to remove connector ${connectorId} from SML: ${
+                (smlError as Error).message
+              }`
+            );
+          }
+        }
       } catch (error) {
         logger.error(
           `Connector lifecycle: failed to clean up for connector ${connectorId}: ${error.message}`

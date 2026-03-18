@@ -18,6 +18,7 @@ import { registerTools } from './tools';
 import { registerAttachmentTypes } from './attachment_types';
 import { registerSkills } from './skills';
 import { visualizationSmlType } from './sml_types/visualization';
+import { createConnectorSmlType } from './sml_types/connector';
 
 export class AgentBuilderPlatformPlugin
   implements
@@ -52,6 +53,18 @@ export class AgentBuilderPlatformPlugin
     });
     registerSkills(setupDeps.agentBuilder);
     setupDeps.agentBuilder.sml.registerType(visualizationSmlType);
+
+    const connectorSmlType = createConnectorSmlType({
+      getToolRegistry: async (request) => {
+        const [, startDeps] = await coreSetup.getStartServices();
+        return startDeps.agentBuilder.tools.getRegistry({ request });
+      },
+      getActionSavedObjectsClient: async () => {
+        const [coreStart] = await coreSetup.getStartServices();
+        return coreStart.savedObjects.createInternalRepository(['action']);
+      },
+    });
+    setupDeps.agentBuilder.sml.registerType(connectorSmlType);
 
     return {};
   }
