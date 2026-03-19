@@ -1,5 +1,5 @@
 {
-  "sha1": "c6e39a51e18ae17349a1148673f80058e3545f7f",
+  "sha1": "e6fa4673938808ccc67eb828ae487906ada613e5",
   "tests": [
     {
       "id": "7a50a1b508e10f4-3be34281d1d9c2c",
@@ -173,7 +173,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/convert.spec.ts",
-        "line": 19,
+        "line": 20,
         "column": 12
       }
     },
@@ -189,7 +189,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/convert.spec.ts",
-        "line": 46,
+        "line": 47,
         "column": 12
       }
     },
@@ -205,7 +205,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/convert.spec.ts",
-        "line": 81,
+        "line": 82,
         "column": 12
       }
     },
@@ -221,7 +221,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/convert.spec.ts",
-        "line": 138,
+        "line": 139,
         "column": 14
       }
     },
@@ -237,7 +237,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/convert.spec.ts",
-        "line": 138,
+        "line": 139,
         "column": 14
       }
     },
@@ -253,7 +253,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/date.spec.ts",
-        "line": 16,
+        "line": 17,
         "column": 10
       }
     },
@@ -267,7 +267,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/date.spec.ts",
-        "line": 46,
+        "line": 49,
         "column": 10
       }
     },
@@ -283,7 +283,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/date.spec.ts",
-        "line": 81,
+        "line": 88,
         "column": 10
       }
     },
@@ -299,7 +299,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/date.spec.ts",
-        "line": 124,
+        "line": 131,
         "column": 12
       }
     },
@@ -315,7 +315,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/date.spec.ts",
-        "line": 124,
+        "line": 131,
         "column": 12
       }
     },
@@ -329,7 +329,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/date.spec.ts",
-        "line": 152,
+        "line": 159,
         "column": 10
       }
     },
@@ -345,7 +345,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/date.spec.ts",
-        "line": 200,
+        "line": 207,
         "column": 10
       }
     },
@@ -361,7 +361,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/date.spec.ts",
-        "line": 232,
+        "line": 239,
         "column": 10
       }
     },
@@ -585,7 +585,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -601,7 +601,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 70,
+        "line": 71,
         "column": 12
       }
     },
@@ -617,7 +617,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 123,
+        "line": 124,
         "column": 12
       }
     },
@@ -633,7 +633,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 178,
+        "line": 179,
         "column": 12
       }
     },
@@ -649,7 +649,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 231,
+        "line": 232,
         "column": 12
       }
     },
@@ -665,7 +665,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 286,
+        "line": 287,
         "column": 12
       }
     },
@@ -681,7 +681,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 339,
+        "line": 340,
         "column": 12
       }
     },
@@ -697,7 +697,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 397,
+        "line": 398,
         "column": 12
       }
     },
@@ -713,7 +713,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 460,
+        "line": 461,
         "column": 12
       }
     },
@@ -729,7 +729,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 566,
+        "line": 567,
         "column": 12
       }
     },
@@ -745,7 +745,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 633,
+        "line": 634,
         "column": 12
       }
     },
@@ -761,7 +761,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 700,
+        "line": 701,
         "column": 12
       }
     },
@@ -777,7 +777,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 780,
+        "line": 781,
         "column": 12
       }
     },
@@ -793,7 +793,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 846,
+        "line": 847,
         "column": 12
       }
     },
@@ -809,7 +809,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 918,
+        "line": 919,
         "column": 12
       }
     },
@@ -825,7 +825,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 978,
+        "line": 979,
         "column": 12
       }
     },
@@ -841,7 +841,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 1032,
+        "line": 1033,
         "column": 12
       }
     },
@@ -857,7 +857,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/filter_conditions.spec.ts",
-        "line": 1099,
+        "line": 1100,
         "column": 12
       }
     },
@@ -1459,7 +1459,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/network_direction.spec.ts",
-        "line": 17,
+        "line": 18,
         "column": 12
       }
     },
@@ -1473,7 +1473,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/network_direction.spec.ts",
-        "line": 54,
+        "line": 55,
         "column": 12
       }
     },
@@ -1487,7 +1487,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/network_direction.spec.ts",
-        "line": 91,
+        "line": 92,
         "column": 12
       }
     },
@@ -1501,7 +1501,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/network_direction.spec.ts",
-        "line": 138,
+        "line": 139,
         "column": 12
       }
     },
@@ -1515,7 +1515,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/network_direction.spec.ts",
-        "line": 181,
+        "line": 182,
         "column": 12
       }
     },
@@ -1723,7 +1723,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/redact.spec.ts",
-        "line": 225,
+        "line": 229,
         "column": 12
       }
     },
@@ -1739,7 +1739,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/redact.spec.ts",
-        "line": 255,
+        "line": 259,
         "column": 12
       }
     },
@@ -1755,7 +1755,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/redact.spec.ts",
-        "line": 285,
+        "line": 289,
         "column": 12
       }
     },
@@ -1771,7 +1771,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/redact.spec.ts",
-        "line": 325,
+        "line": 329,
         "column": 14
       }
     },
@@ -1787,7 +1787,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/redact.spec.ts",
-        "line": 325,
+        "line": 329,
         "column": 14
       }
     },
@@ -2043,7 +2043,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/replace.spec.ts",
-        "line": 188,
+        "line": 192,
         "column": 12
       }
     },
@@ -2059,7 +2059,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/replace.spec.ts",
-        "line": 226,
+        "line": 230,
         "column": 12
       }
     },
@@ -2075,7 +2075,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/replace.spec.ts",
-        "line": 273,
+        "line": 277,
         "column": 14
       }
     },
@@ -2091,7 +2091,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/replace.spec.ts",
-        "line": 273,
+        "line": 277,
         "column": 14
       }
     },
@@ -2107,7 +2107,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/replace.spec.ts",
-        "line": 302,
+        "line": 306,
         "column": 12
       }
     },
@@ -2123,7 +2123,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/set.spec.ts",
-        "line": 19,
+        "line": 20,
         "column": 12
       }
     },
@@ -2139,7 +2139,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/set.spec.ts",
-        "line": 46,
+        "line": 47,
         "column": 12
       }
     },
@@ -2155,7 +2155,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/set.spec.ts",
-        "line": 73,
+        "line": 74,
         "column": 12
       }
     },
@@ -2171,7 +2171,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/set.spec.ts",
-        "line": 104,
+        "line": 105,
         "column": 12
       }
     },
@@ -2187,7 +2187,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/set.spec.ts",
-        "line": 148,
+        "line": 149,
         "column": 14
       }
     },
@@ -2203,7 +2203,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/set.spec.ts",
-        "line": 148,
+        "line": 149,
         "column": 14
       }
     },
@@ -2301,7 +2301,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/sort.spec.ts",
-        "line": 201,
+        "line": 205,
         "column": 10
       }
     },
@@ -2315,7 +2315,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/sort.spec.ts",
-        "line": 262,
+        "line": 268,
         "column": 12
       }
     },
@@ -2329,7 +2329,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/sort.spec.ts",
-        "line": 262,
+        "line": 268,
         "column": 12
       }
     },
@@ -2413,7 +2413,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/split.spec.ts",
-        "line": 185,
+        "line": 189,
         "column": 12
       }
     },
@@ -2427,7 +2427,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/split.spec.ts",
-        "line": 185,
+        "line": 189,
         "column": 12
       }
     },
@@ -2441,7 +2441,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/split.spec.ts",
-        "line": 213,
+        "line": 217,
         "column": 10
       }
     },
@@ -2455,7 +2455,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/split.spec.ts",
-        "line": 250,
+        "line": 254,
         "column": 10
       }
     },
@@ -2469,7 +2469,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/cross_compatibility/split.spec.ts",
-        "line": 282,
+        "line": 286,
         "column": 10
       }
     },
@@ -3832,7 +3832,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/esql/redact.spec.ts",
-        "line": 252,
+        "line": 254,
         "column": 12
       }
     },
@@ -3848,7 +3848,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/esql/redact.spec.ts",
-        "line": 277,
+        "line": 279,
         "column": 12
       }
     },
@@ -3864,7 +3864,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/esql/redact.spec.ts",
-        "line": 302,
+        "line": 304,
         "column": 12
       }
     },
@@ -4932,7 +4932,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/convert.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -4948,7 +4948,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/convert.spec.ts",
-        "line": 67,
+        "line": 68,
         "column": 14
       }
     },
@@ -4964,7 +4964,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/convert.spec.ts",
-        "line": 67,
+        "line": 68,
         "column": 14
       }
     },
@@ -4980,7 +4980,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/convert.spec.ts",
-        "line": 67,
+        "line": 68,
         "column": 14
       }
     },
@@ -4996,7 +4996,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/convert.spec.ts",
-        "line": 67,
+        "line": 68,
         "column": 14
       }
     },
@@ -5012,7 +5012,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/convert.spec.ts",
-        "line": 85,
+        "line": 86,
         "column": 12
       }
     },
@@ -5028,7 +5028,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/convert.spec.ts",
-        "line": 112,
+        "line": 113,
         "column": 12
       }
     },
@@ -5045,7 +5045,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 15,
+        "line": 16,
         "column": 10
       }
     },
@@ -5061,7 +5061,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 42,
+        "line": 43,
         "column": 10
       }
     },
@@ -5077,7 +5077,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 71,
+        "line": 72,
         "column": 10
       }
     },
@@ -5091,7 +5091,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 100,
+        "line": 101,
         "column": 10
       }
     },
@@ -5107,7 +5107,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 129,
+        "line": 130,
         "column": 10
       }
     },
@@ -5123,7 +5123,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 158,
+        "line": 159,
         "column": 10
       }
     },
@@ -5139,7 +5139,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 194,
+        "line": 195,
         "column": 12
       }
     },
@@ -5155,7 +5155,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 194,
+        "line": 195,
         "column": 12
       }
     },
@@ -5171,7 +5171,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 216,
+        "line": 217,
         "column": 10
       }
     },
@@ -5187,7 +5187,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 247,
+        "line": 250,
         "column": 10
       }
     },
@@ -5203,7 +5203,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/date.spec.ts",
-        "line": 277,
+        "line": 280,
         "column": 10
       }
     },
@@ -5219,7 +5219,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/dissect.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -5235,7 +5235,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/dissect.spec.ts",
-        "line": 51,
+        "line": 52,
         "column": 12
       }
     },
@@ -5251,7 +5251,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/dissect.spec.ts",
-        "line": 76,
+        "line": 77,
         "column": 12
       }
     },
@@ -5267,7 +5267,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/dissect.spec.ts",
-        "line": 97,
+        "line": 98,
         "column": 12
       }
     },
@@ -5283,7 +5283,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/dissect.spec.ts",
-        "line": 132,
+        "line": 133,
         "column": 14
       }
     },
@@ -5299,7 +5299,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/dissect.spec.ts",
-        "line": 132,
+        "line": 133,
         "column": 14
       }
     },
@@ -5331,7 +5331,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/filter_conditions.spec.ts",
-        "line": 20,
+        "line": 21,
         "column": 12
       }
     },
@@ -5347,7 +5347,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/filter_conditions.spec.ts",
-        "line": 58,
+        "line": 59,
         "column": 12
       }
     },
@@ -5363,7 +5363,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/filter_conditions.spec.ts",
-        "line": 89,
+        "line": 90,
         "column": 12
       }
     },
@@ -5379,7 +5379,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/filter_conditions.spec.ts",
-        "line": 120,
+        "line": 121,
         "column": 12
       }
     },
@@ -5395,7 +5395,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/filter_conditions.spec.ts",
-        "line": 154,
+        "line": 155,
         "column": 12
       }
     },
@@ -5411,7 +5411,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/filter_conditions.spec.ts",
-        "line": 188,
+        "line": 189,
         "column": 12
       }
     },
@@ -5427,7 +5427,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/filter_conditions.spec.ts",
-        "line": 222,
+        "line": 223,
         "column": 12
       }
     },
@@ -5443,7 +5443,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/grok.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -5459,7 +5459,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/grok.spec.ts",
-        "line": 48,
+        "line": 49,
         "column": 12
       }
     },
@@ -5475,7 +5475,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/grok.spec.ts",
-        "line": 73,
+        "line": 74,
         "column": 12
       }
     },
@@ -5491,7 +5491,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/grok.spec.ts",
-        "line": 94,
+        "line": 95,
         "column": 12
       }
     },
@@ -5507,7 +5507,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/grok.spec.ts",
-        "line": 124,
+        "line": 125,
         "column": 14
       }
     },
@@ -5523,7 +5523,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/grok.spec.ts",
-        "line": 124,
+        "line": 125,
         "column": 14
       }
     },
@@ -5921,7 +5921,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/network_direction.spec.ts",
-        "line": 17,
+        "line": 18,
         "column": 12
       }
     },
@@ -5935,7 +5935,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/network_direction.spec.ts",
-        "line": 41,
+        "line": 42,
         "column": 12
       }
     },
@@ -5949,7 +5949,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/network_direction.spec.ts",
-        "line": 71,
+        "line": 72,
         "column": 12
       }
     },
@@ -5963,7 +5963,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/network_direction.spec.ts",
-        "line": 96,
+        "line": 97,
         "column": 12
       }
     },
@@ -5977,7 +5977,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/network_direction.spec.ts",
-        "line": 135,
+        "line": 136,
         "column": 12
       }
     },
@@ -6121,7 +6121,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/redact.spec.ts",
-        "line": 234,
+        "line": 238,
         "column": 12
       }
     },
@@ -6137,7 +6137,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/redact.spec.ts",
-        "line": 259,
+        "line": 263,
         "column": 12
       }
     },
@@ -6153,7 +6153,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/redact.spec.ts",
-        "line": 294,
+        "line": 298,
         "column": 14
       }
     },
@@ -6169,7 +6169,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/redact.spec.ts",
-        "line": 294,
+        "line": 298,
         "column": 14
       }
     },
@@ -6185,7 +6185,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -6201,7 +6201,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 42,
+        "line": 43,
         "column": 12
       }
     },
@@ -6217,7 +6217,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 83,
+        "line": 84,
         "column": 12
       }
     },
@@ -6233,7 +6233,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 118,
+        "line": 119,
         "column": 12
       }
     },
@@ -6249,7 +6249,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 157,
+        "line": 158,
         "column": 12
       }
     },
@@ -6265,7 +6265,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 198,
+        "line": 199,
         "column": 12
       }
     },
@@ -6281,7 +6281,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 239,
+        "line": 240,
         "column": 12
       }
     },
@@ -6297,7 +6297,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 295,
+        "line": 298,
         "column": 14
       }
     },
@@ -6313,7 +6313,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove_by_prefix.spec.ts",
-        "line": 295,
+        "line": 298,
         "column": 14
       }
     },
@@ -6329,7 +6329,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -6345,7 +6345,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove.spec.ts",
-        "line": 42,
+        "line": 43,
         "column": 12
       }
     },
@@ -6361,7 +6361,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove.spec.ts",
-        "line": 66,
+        "line": 67,
         "column": 12
       }
     },
@@ -6377,7 +6377,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove.spec.ts",
-        "line": 87,
+        "line": 88,
         "column": 12
       }
     },
@@ -6393,7 +6393,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove.spec.ts",
-        "line": 125,
+        "line": 126,
         "column": 12
       }
     },
@@ -6409,7 +6409,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove.spec.ts",
-        "line": 156,
+        "line": 157,
         "column": 14
       }
     },
@@ -6425,7 +6425,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/remove.spec.ts",
-        "line": 156,
+        "line": 157,
         "column": 14
       }
     },
@@ -6441,7 +6441,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/rename.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -6457,7 +6457,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/rename.spec.ts",
-        "line": 55,
+        "line": 56,
         "column": 14
       }
     },
@@ -6473,7 +6473,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/rename.spec.ts",
-        "line": 55,
+        "line": 56,
         "column": 14
       }
     },
@@ -6489,7 +6489,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/rename.spec.ts",
-        "line": 72,
+        "line": 73,
         "column": 12
       }
     },
@@ -6505,7 +6505,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/rename.spec.ts",
-        "line": 97,
+        "line": 98,
         "column": 12
       }
     },
@@ -6521,7 +6521,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/rename.spec.ts",
-        "line": 119,
+        "line": 120,
         "column": 12
       }
     },
@@ -6537,7 +6537,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/rename.spec.ts",
-        "line": 144,
+        "line": 145,
         "column": 12
       }
     },
@@ -6553,7 +6553,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/rename.spec.ts",
-        "line": 166,
+        "line": 167,
         "column": 12
       }
     },
@@ -6569,7 +6569,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -6585,7 +6585,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 42,
+        "line": 43,
         "column": 12
       }
     },
@@ -6601,7 +6601,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 68,
+        "line": 69,
         "column": 12
       }
     },
@@ -6617,7 +6617,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 92,
+        "line": 93,
         "column": 12
       }
     },
@@ -6633,7 +6633,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 116,
+        "line": 117,
         "column": 12
       }
     },
@@ -6649,7 +6649,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 141,
+        "line": 142,
         "column": 12
       }
     },
@@ -6665,7 +6665,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 168,
+        "line": 169,
         "column": 12
       }
     },
@@ -6681,7 +6681,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 208,
+        "line": 213,
         "column": 12
       }
     },
@@ -6697,7 +6697,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 264,
+        "line": 273,
         "column": 14
       }
     },
@@ -6713,7 +6713,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/replace.spec.ts",
-        "line": 264,
+        "line": 273,
         "column": 14
       }
     },
@@ -6729,7 +6729,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 18,
+        "line": 19,
         "column": 12
       }
     },
@@ -6745,7 +6745,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 67,
+        "line": 68,
         "column": 14
       }
     },
@@ -6761,7 +6761,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 67,
+        "line": 68,
         "column": 14
       }
     },
@@ -6777,7 +6777,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 67,
+        "line": 68,
         "column": 14
       }
     },
@@ -6793,7 +6793,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 67,
+        "line": 68,
         "column": 14
       }
     },
@@ -6809,7 +6809,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 84,
+        "line": 85,
         "column": 12
       }
     },
@@ -6825,7 +6825,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 106,
+        "line": 107,
         "column": 12
       }
     },
@@ -6841,7 +6841,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 129,
+        "line": 130,
         "column": 12
       }
     },
@@ -6857,7 +6857,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 152,
+        "line": 153,
         "column": 12
       }
     },
@@ -6873,7 +6873,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/set.spec.ts",
-        "line": 167,
+        "line": 168,
         "column": 12
       }
     },
@@ -6887,7 +6887,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 17,
+        "line": 18,
         "column": 12
       }
     },
@@ -6901,7 +6901,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 41,
+        "line": 42,
         "column": 12
       }
     },
@@ -6915,7 +6915,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 66,
+        "line": 67,
         "column": 12
       }
     },
@@ -6929,7 +6929,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 95,
+        "line": 96,
         "column": 12
       }
     },
@@ -6943,7 +6943,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 120,
+        "line": 121,
         "column": 12
       }
     },
@@ -6957,7 +6957,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 141,
+        "line": 142,
         "column": 12
       }
     },
@@ -6971,7 +6971,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 169,
+        "line": 170,
         "column": 12
       }
     },
@@ -6985,7 +6985,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 197,
+        "line": 198,
         "column": 12
       }
     },
@@ -6999,7 +6999,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 222,
+        "line": 223,
         "column": 12
       }
     },
@@ -7013,7 +7013,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 263,
+        "line": 268,
         "column": 12
       }
     },
@@ -7027,7 +7027,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 324,
+        "line": 333,
         "column": 14
       }
     },
@@ -7041,7 +7041,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/sort.spec.ts",
-        "line": 324,
+        "line": 333,
         "column": 14
       }
     },
@@ -7055,7 +7055,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 17,
+        "line": 18,
         "column": 12
       }
     },
@@ -7069,7 +7069,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 42,
+        "line": 43,
         "column": 12
       }
     },
@@ -7083,7 +7083,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 71,
+        "line": 72,
         "column": 12
       }
     },
@@ -7097,7 +7097,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 96,
+        "line": 97,
         "column": 12
       }
     },
@@ -7111,7 +7111,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 118,
+        "line": 119,
         "column": 12
       }
     },
@@ -7125,7 +7125,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 144,
+        "line": 145,
         "column": 12
       }
     },
@@ -7139,7 +7139,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 173,
+        "line": 174,
         "column": 12
       }
     },
@@ -7153,7 +7153,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 200,
+        "line": 201,
         "column": 12
       }
     },
@@ -7167,7 +7167,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 241,
+        "line": 246,
         "column": 12
       }
     },
@@ -7181,7 +7181,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 304,
+        "line": 313,
         "column": 14
       }
     },
@@ -7195,7 +7195,7 @@
       ],
       "location": {
         "file": "x-pack/platform/packages/shared/kbn-streamlang-tests/test/scout/api/tests/ingest_pipeline/split.spec.ts",
-        "line": 304,
+        "line": 313,
         "column": 14
       }
     },

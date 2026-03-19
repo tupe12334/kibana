@@ -1,10 +1,10 @@
 {
-  "sha1": "cbe4b2e918093c2040f6d789ee082a8d5d447eb5",
+  "sha1": "09bfe0a62421749c312f744977a3dd413206e822",
   "tests": [
     {
       "id": "fedda44db506679-b402fd1accda876",
       "title": "Workflow execution concurrency control cancel-in-progress strategy cancels previous executions and completes the latest",
-      "expectedStatus": "passed",
+      "expectedStatus": "skipped",
       "tags": [
         "@local-stateful-classic",
         "@cloud-stateful-classic",
@@ -23,14 +23,14 @@
       ],
       "location": {
         "file": "src/platform/plugins/shared/workflows_management/test/scout_workflows_ui/api/tests/workflow_execution/concurrency_control.spec.ts",
-        "line": 110,
+        "line": 111,
         "column": 14
       }
     },
     {
       "id": "fedda44db506679-f33c86dd5c9b2b6",
       "title": "Workflow execution concurrency control drop strategy drops new executions until there is an already running execution",
-      "expectedStatus": "passed",
+      "expectedStatus": "skipped",
       "tags": [
         "@local-stateful-classic",
         "@cloud-stateful-classic",
@@ -49,8 +49,34 @@
       ],
       "location": {
         "file": "src/platform/plugins/shared/workflows_management/test/scout_workflows_ui/api/tests/workflow_execution/concurrency_control.spec.ts",
-        "line": 142,
+        "line": 143,
         "column": 14
+      }
+    },
+    {
+      "id": "337190238aab48d-e8ac210a9d9227d",
+      "title": "Scheduled workflow save and update updating a scheduled workflow with a changed interval succeeds",
+      "expectedStatus": "passed",
+      "tags": [
+        "@local-stateful-classic",
+        "@cloud-stateful-classic",
+        "@local-stateful-search",
+        "@cloud-stateful-search",
+        "@local-stateful-observability_complete",
+        "@cloud-stateful-observability_complete",
+        "@local-stateful-security_complete",
+        "@cloud-stateful-security_complete",
+        "@local-serverless-search",
+        "@cloud-serverless-search",
+        "@local-serverless-observability_complete",
+        "@cloud-serverless-observability_complete",
+        "@local-serverless-security_complete",
+        "@cloud-serverless-security_complete"
+      ],
+      "location": {
+        "file": "src/platform/plugins/shared/workflows_management/test/scout_workflows_ui/api/tests/workflow_execution/scheduled_workflow.spec.ts",
+        "line": 84,
+        "column": 12
       }
     },
     {
@@ -75,7 +101,7 @@
       ],
       "location": {
         "file": "src/platform/plugins/shared/workflows_management/test/scout_workflows_ui/api/tests/workflow_execution/scheduled_workflow.spec.ts",
-        "line": 71,
+        "line": 126,
         "column": 12
       }
     },
@@ -101,7 +127,7 @@
       ],
       "location": {
         "file": "src/platform/plugins/shared/workflows_management/test/scout_workflows_ui/api/tests/workflow_execution/scheduled_workflow.spec.ts",
-        "line": 105,
+        "line": 160,
         "column": 12
       }
     },
@@ -127,7 +153,7 @@
       ],
       "location": {
         "file": "src/platform/plugins/shared/workflows_management/test/scout_workflows_ui/api/tests/workflow_execution/scheduled_workflow.spec.ts",
-        "line": 132,
+        "line": 187,
         "column": 12
       }
     },

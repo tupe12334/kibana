@@ -1,5 +1,5 @@
 {
-  "sha1": "fb374e0c1241deba340defa265887a6f52e88672",
+  "sha1": "a990c3ed5fb1790bd6e396ce3e48b5bc1fdef2fc",
   "tests": [
     {
       "id": "b766b9bba0d643a-9872ed8d1853c32",
@@ -658,8 +658,8 @@
       }
     },
     {
-      "id": "b9f6da09bb1a1e2-6c5b60f8439f3d5",
-      "title": "Entity Store API tests Should install the entity store happy path with feature flag enabled",
+      "id": "69891ea93f2e975-c18f4e661235e05",
+      "title": "Entity Store install / update API tests Should install the entity store happy path with feature flag enabled",
       "expectedStatus": "passed",
       "tags": [
         "@local-stateful-classic",
@@ -668,14 +668,14 @@
         "@cloud-serverless-security_complete"
       ],
       "location": {
-        "file": "x-pack/solutions/security/plugins/entity_store/test/scout/api/tests/install.spec.ts",
-        "line": 25,
+        "file": "x-pack/solutions/security/plugins/entity_store/test/scout/api/tests/install_update.spec.ts",
+        "line": 24,
         "column": 10
       }
     },
     {
-      "id": "b9f6da09bb1a1e2-b00ff4ea2f75181",
-      "title": "Entity Store API tests Should fail with feature flag disabled",
+      "id": "69891ea93f2e975-79b9321af5a6eda",
+      "title": "Entity Store install / update API tests Should fail with feature flag disabled",
       "expectedStatus": "passed",
       "tags": [
         "@local-stateful-classic",
@@ -684,8 +684,72 @@
         "@cloud-serverless-security_complete"
       ],
       "location": {
-        "file": "x-pack/solutions/security/plugins/entity_store/test/scout/api/tests/install.spec.ts",
-        "line": 48,
+        "file": "x-pack/solutions/security/plugins/entity_store/test/scout/api/tests/install_update.spec.ts",
+        "line": 47,
+        "column": 10
+      }
+    },
+    {
+      "id": "69891ea93f2e975-a600fdc9000f15c",
+      "title": "Entity Store install / update API tests logExtraction is not mandatory on install",
+      "expectedStatus": "passed",
+      "tags": [
+        "@local-stateful-classic",
+        "@cloud-stateful-classic",
+        "@local-serverless-security_complete",
+        "@cloud-serverless-security_complete"
+      ],
+      "location": {
+        "file": "x-pack/solutions/security/plugins/entity_store/test/scout/api/tests/install_update.spec.ts",
+        "line": 60,
+        "column": 10
+      }
+    },
+    {
+      "id": "69891ea93f2e975-1e886910e4426bc",
+      "title": "Entity Store install / update API tests logExtraction is mandatory on update",
+      "expectedStatus": "passed",
+      "tags": [
+        "@local-stateful-classic",
+        "@cloud-stateful-classic",
+        "@local-serverless-security_complete",
+        "@cloud-serverless-security_complete"
+      ],
+      "location": {
+        "file": "x-pack/solutions/security/plugins/entity_store/test/scout/api/tests/install_update.spec.ts",
+        "line": 79,
+        "column": 10
+      }
+    },
+    {
+      "id": "69891ea93f2e975-c42368a614ad4b9",
+      "title": "Entity Store install / update API tests Update should change installed logExtraction params",
+      "expectedStatus": "passed",
+      "tags": [
+        "@local-stateful-classic",
+        "@cloud-stateful-classic",
+        "@local-serverless-security_complete",
+        "@cloud-serverless-security_complete"
+      ],
+      "location": {
+        "file": "x-pack/solutions/security/plugins/entity_store/test/scout/api/tests/install_update.spec.ts",
+        "line": 104,
+        "column": 10
+      }
+    },
+    {
+      "id": "69891ea93f2e975-0d7bd05437a88c9",
+      "title": "Entity Store install / update API tests Update should not change logExtraction properties that were not included in the update",
+      "expectedStatus": "passed",
+      "tags": [
+        "@local-stateful-classic",
+        "@cloud-stateful-classic",
+        "@local-serverless-security_complete",
+        "@cloud-serverless-security_complete"
+      ],
+      "location": {
+        "file": "x-pack/solutions/security/plugins/entity_store/test/scout/api/tests/install_update.spec.ts",
+        "line": 141,
         "column": 10
       }
     },
