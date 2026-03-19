@@ -39,7 +39,6 @@ const { getConnectorSpec, getWorkflowTemplatesForConnector } =
   jest.requireMock('@kbn/connector-specs');
 
 const mockSavedObjectsClient = {
-  createPointInTimeFinder: jest.fn(),
   get: jest.fn(),
 };
 
@@ -49,6 +48,7 @@ const mockToolRegistry = {
 
 const mockGetToolRegistry = jest.fn().mockResolvedValue(mockToolRegistry);
 const mockGetActionSavedObjectsClient = jest.fn().mockResolvedValue(mockSavedObjectsClient);
+const mockLogger = loggingSystemMock.createLogger();
 
 const createContext = () => ({
   logger: loggingSystemMock.createLogger(),
@@ -71,6 +71,7 @@ describe('connectorSmlType', () => {
   const connectorSmlType = createConnectorSmlType({
     getToolRegistry: mockGetToolRegistry,
     getActionSavedObjectsClient: mockGetActionSavedObjectsClient,
+    logger: mockLogger,
   });
 
   beforeEach(() => {
@@ -83,162 +84,10 @@ describe('connectorSmlType', () => {
     });
   });
 
-  describe('fetchFrequency', () => {
-    it('returns 24h (safety-net crawl; primary indexing is event-driven)', () => {
-      expect(connectorSmlType.fetchFrequency!()).toBe('24h');
-    });
-  });
-
   describe('list', () => {
-    it('only yields connectors with agent-builder-tool tagged workflow templates', async () => {
-      getWorkflowTemplatesForConnector.mockImplementation((typeId: string) => {
-        if (typeId === '.mcp') return [WORKFLOW_YAML_WITH_TAG];
-        if (typeId === '.slack2') return [WORKFLOW_YAML_WITHOUT_TAG];
-        return [];
-      });
-
-      const savedObjects = [
-        {
-          id: 'conn-1',
-          type: 'action',
-          attributes: { actionTypeId: '.mcp', name: 'My MCP' },
-          references: [],
-          updated_at: '2024-01-01T00:00:00Z',
-          namespaces: ['default'],
-        },
-        {
-          id: 'conn-2',
-          type: 'action',
-          attributes: { actionTypeId: '.slack2', name: 'Slack' },
-          references: [],
-          updated_at: '2024-01-02T00:00:00Z',
-          namespaces: ['default'],
-        },
-        {
-          id: 'conn-3',
-          type: 'action',
-          attributes: { actionTypeId: '.email', name: 'Email' },
-          references: [],
-          updated_at: '2024-01-03T00:00:00Z',
-          namespaces: ['default'],
-        },
-      ];
-
-      const closeMock = jest.fn();
-      mockSavedObjectsClient.createPointInTimeFinder.mockReturnValue({
-        async *find() {
-          yield { saved_objects: savedObjects };
-        },
-        close: closeMock,
-      });
-
+    it('yields nothing — connector indexing is event-driven only', async () => {
       const result = await collectPages(connectorSmlType.list(createContext() as never));
-
-      expect(result).toEqual([
-        {
-          id: 'conn-1',
-          updatedAt: '2024-01-01T00:00:00Z',
-          spaces: ['default'],
-        },
-      ]);
-      expect(closeMock).toHaveBeenCalled();
-    });
-
-    it('skips connectors without workflow templates', async () => {
-      getWorkflowTemplatesForConnector.mockReturnValue([]);
-
-      const savedObjects = [
-        {
-          id: 'conn-1',
-          type: 'action',
-          attributes: { actionTypeId: '.email', name: 'Email' },
-          references: [],
-          updated_at: '2024-01-01T00:00:00Z',
-          namespaces: ['default'],
-        },
-      ];
-
-      const closeMock = jest.fn();
-      mockSavedObjectsClient.createPointInTimeFinder.mockReturnValue({
-        async *find() {
-          yield { saved_objects: savedObjects };
-        },
-        close: closeMock,
-      });
-
-      const result = await collectPages(connectorSmlType.list(createContext() as never));
-
       expect(result).toEqual([]);
-      expect(closeMock).toHaveBeenCalled();
-    });
-
-    it('closes PIT finder even when an error occurs', async () => {
-      const closeMock = jest.fn();
-      mockSavedObjectsClient.createPointInTimeFinder.mockReturnValue({
-        async *find() {
-          throw new Error('PIT error');
-        },
-        close: closeMock,
-      });
-
-      await expect(collectPages(connectorSmlType.list(createContext() as never))).rejects.toThrow(
-        'PIT error'
-      );
-      expect(closeMock).toHaveBeenCalled();
-    });
-
-    it('defaults updatedAt to current date when so.updated_at is undefined', async () => {
-      getWorkflowTemplatesForConnector.mockReturnValue([WORKFLOW_YAML_WITH_TAG]);
-
-      const savedObjects = [
-        {
-          id: 'conn-1',
-          type: 'action',
-          attributes: { actionTypeId: '.mcp', name: 'MCP' },
-          references: [],
-          updated_at: undefined,
-          namespaces: ['default'],
-        },
-      ];
-
-      mockSavedObjectsClient.createPointInTimeFinder.mockReturnValue({
-        async *find() {
-          yield { saved_objects: savedObjects };
-        },
-        close: jest.fn(),
-      });
-
-      const result = await collectPages(connectorSmlType.list(createContext() as never));
-
-      expect(result).toHaveLength(1);
-      expect(result[0].updatedAt).toBeDefined();
-      expect(new Date(result[0].updatedAt).getTime()).not.toBeNaN();
-    });
-
-    it('defaults spaces to [] when so.namespaces is undefined', async () => {
-      getWorkflowTemplatesForConnector.mockReturnValue([WORKFLOW_YAML_WITH_TAG]);
-
-      const savedObjects = [
-        {
-          id: 'conn-1',
-          type: 'action',
-          attributes: { actionTypeId: '.mcp', name: 'MCP' },
-          references: [],
-          updated_at: '2024-01-01T00:00:00Z',
-          namespaces: undefined,
-        },
-      ];
-
-      mockSavedObjectsClient.createPointInTimeFinder.mockReturnValue({
-        async *find() {
-          yield { saved_objects: savedObjects };
-        },
-        close: jest.fn(),
-      });
-
-      const result = await collectPages(connectorSmlType.list(createContext() as never));
-
-      expect(result).toEqual([{ id: 'conn-1', updatedAt: '2024-01-01T00:00:00Z', spaces: [] }]);
     });
   });
 
@@ -377,7 +226,7 @@ describe('connectorSmlType', () => {
       });
     });
 
-    it('returns undefined when connector is not found', async () => {
+    it('returns undefined and logs warning when connector is not found', async () => {
       mockSavedObjectsClient.get.mockRejectedValue(new Error('Not found'));
 
       const result = await connectorSmlType.toAttachment!(
@@ -386,6 +235,9 @@ describe('connectorSmlType', () => {
       );
 
       expect(result).toBeUndefined();
+      expect(mockLogger.warn).toHaveBeenCalledWith(
+        expect.stringContaining("failed to convert 'missing-conn' to attachment")
+      );
     });
 
     it('returns attachment with empty tools when no tools match the connector tag', async () => {
@@ -419,6 +271,47 @@ describe('connectorSmlType', () => {
           connector_name: 'My Connector',
           connector_type: '.mcp',
           tools: [],
+        },
+      });
+    });
+
+    it('defaults workflow_id to empty string when tool configuration is missing it', async () => {
+      mockSavedObjectsClient.get.mockResolvedValue({
+        id: 'conn-1',
+        type: 'action',
+        attributes: { name: 'Conn', actionTypeId: '.mcp' },
+        references: [],
+      });
+
+      mockToolRegistry.list.mockResolvedValue([
+        {
+          id: 'mcp.tool',
+          type: 'workflow',
+          description: 'Tool without workflow_id',
+          readonly: false,
+          tags: ['connector:conn-1'],
+          configuration: {},
+        },
+      ]);
+
+      const result = await connectorSmlType.toAttachment!(
+        { origin_id: 'conn-1' } as never,
+        createAttachmentContext() as never
+      );
+
+      expect(result).toEqual({
+        type: AttachmentType.connector,
+        data: {
+          connector_id: 'conn-1',
+          connector_name: 'Conn',
+          connector_type: '.mcp',
+          tools: [
+            {
+              id: 'mcp.tool',
+              description: 'Tool without workflow_id',
+              configuration: { workflow_id: '' },
+            },
+          ],
         },
       });
     });

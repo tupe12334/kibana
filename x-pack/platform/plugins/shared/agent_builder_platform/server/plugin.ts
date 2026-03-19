@@ -29,7 +29,6 @@ export class AgentBuilderPlatformPlugin
       PluginStartDependencies
     >
 {
-  // @ts-expect-error unused for now
   private logger: Logger;
   // @ts-expect-error unused for now
   private config: AgentBuilderConfig;
@@ -63,6 +62,7 @@ export class AgentBuilderPlatformPlugin
         const [coreStart] = await coreSetup.getStartServices();
         return coreStart.savedObjects.createInternalRepository(['action']);
       },
+      logger: this.logger.get('sml-connector'),
     });
     setupDeps.agentBuilder.sml.registerType(connectorSmlType);
 

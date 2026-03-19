@@ -8,6 +8,7 @@
 import { parse } from 'yaml';
 import type { KibanaRequest } from '@kbn/core-http-server';
 import type { SavedObjectsClientContract } from '@kbn/core-saved-objects-api-server';
+import type { Logger } from '@kbn/logging';
 import type { SmlTypeDefinition } from '@kbn/agent-builder-plugin/server';
 import type { ToolRegistry } from '@kbn/agent-builder-server';
 import type { ConnectorAttachmentData } from '@kbn/agent-builder-common/attachments';
@@ -25,82 +26,48 @@ interface ConnectorSmlTypeDeps {
    * hidden types, so this factory creates one with `includedHiddenTypes: ['action']`.
    */
   getActionSavedObjectsClient: () => Promise<SavedObjectsClientContract>;
+  logger: Logger;
 }
 
 /**
- * Checks whether a workflow YAML template has the `agent-builder-tool` tag.
+ * Parses a workflow YAML template and extracts metadata relevant to SML.
+ * Returns the tag check and description in a single parse pass.
  */
-const hasAgentBuilderToolTag = (yamlTemplate: string): boolean => {
+const parseWorkflowTemplate = (
+  yamlTemplate: string
+): { hasAgentBuilderToolTag: boolean; description?: string } => {
   try {
     const parsed = parse(yamlTemplate);
-    return parsed?.tags?.includes('agent-builder-tool') ?? false;
+    return {
+      hasAgentBuilderToolTag: parsed?.tags?.includes('agent-builder-tool') ?? false,
+      description: typeof parsed?.description === 'string' ? parsed.description : undefined,
+    };
   } catch {
-    return false;
-  }
-};
-
-/**
- * Extracts a human-readable description from a workflow YAML template.
- */
-const extractToolDescription = (yamlTemplate: string): string | undefined => {
-  try {
-    const parsed = parse(yamlTemplate);
-    return typeof parsed?.description === 'string' ? parsed.description : undefined;
-  } catch {
-    return undefined;
+    return { hasAgentBuilderToolTag: false };
   }
 };
 
 /**
  * Creates the SML type definition for connectors.
  *
- * Connectors with `agentBuilderWorkflows` (that have the `agent-builder-tool` tag)
- * are indexed into the SML so they can be discovered via `sml_search`.
+ * Connectors are indexed into the SML exclusively via event-driven calls
+ * in the connector lifecycle handler (onPostCreate / onPostDelete).
+ * No crawling is needed — `list` yields nothing and `fetchFrequency` is omitted.
  *
  * A factory function is used because `toAttachment()` needs access to the tool
  * registry, which requires a scoped request not available in the `SmlToAttachmentContext`.
  */
 export const createConnectorSmlType = (deps: ConnectorSmlTypeDeps): SmlTypeDefinition => {
-  const { getToolRegistry, getActionSavedObjectsClient } = deps;
+  const { getToolRegistry, getActionSavedObjectsClient, logger } = deps;
 
   return {
     id: CONNECTOR_SML_TYPE,
-    // Connectors are indexed via event-driven calls in the connector lifecycle
-    // handler (onPostCreate / onPostDelete), so frequent crawling is unnecessary.
-    // The crawler runs as a safety net to catch any missed events.
-    fetchFrequency: () => '24h',
 
-    async *list(_context) {
-      const soClient = await getActionSavedObjectsClient();
-      const finder = soClient.createPointInTimeFinder({
-        type: 'action',
-        perPage: 1000,
-        namespaces: ['*'],
-        fields: ['actionTypeId', 'name'],
-      });
-
-      try {
-        for await (const response of finder.find()) {
-          const items = response.saved_objects.filter((so) => {
-            const actionTypeId = (so.attributes as { actionTypeId?: string }).actionTypeId;
-            if (!actionTypeId) return false;
-
-            const templates = getWorkflowTemplatesForConnector(actionTypeId);
-            return templates.length > 0 && templates.some(hasAgentBuilderToolTag);
-          });
-
-          if (items.length > 0) {
-            yield items.map((so) => ({
-              id: so.id,
-              updatedAt: so.updated_at ?? new Date().toISOString(),
-              spaces: so.namespaces ?? [],
-            }));
-          }
-        }
-      } finally {
-        await finder.close();
-      }
-    },
+    // Connectors are indexed exclusively via event-driven lifecycle hooks.
+    // The list method yields nothing — no crawling is performed.
+    list: (_context) => ({
+      [Symbol.asyncIterator]: () => ({ next: async () => ({ done: true as const, value: [] }) }),
+    }),
 
     getSmlData: async (originId, context) => {
       try {
@@ -116,9 +83,9 @@ export const createConnectorSmlType = (deps: ConnectorSmlTypeDeps): SmlTypeDefin
 
         const templates = getWorkflowTemplatesForConnector(actionTypeId);
         const toolDescriptions = templates
-          .filter(hasAgentBuilderToolTag)
-          .map(extractToolDescription)
-          .filter((d): d is string => !!d);
+          .map(parseWorkflowTemplate)
+          .filter((t) => t.hasAgentBuilderToolTag && t.description)
+          .map((t) => t.description!);
 
         const contentParts = [name, displayName, description, ...toolDescriptions].filter(Boolean);
 
@@ -159,7 +126,8 @@ export const createConnectorSmlType = (deps: ConnectorSmlTypeDeps): SmlTypeDefin
           id: tool.id,
           description: tool.description,
           configuration: {
-            workflow_id: (tool.configuration as Record<string, unknown>)?.workflow_id as string,
+            workflow_id:
+              ((tool.configuration as Record<string, unknown>)?.workflow_id as string) ?? '',
           },
         }));
 
@@ -175,6 +143,11 @@ export const createConnectorSmlType = (deps: ConnectorSmlTypeDeps): SmlTypeDefin
           data: data as unknown as Record<string, unknown>,
         };
       } catch (error) {
+        logger.warn(
+          `SML connector: failed to convert '${item.origin_id}' to attachment: ${
+            (error as Error).message
+          }`
+        );
         return undefined;
       }
     },
