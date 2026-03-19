@@ -10,6 +10,7 @@ import Mustache from 'mustache';
 import { parse } from 'yaml';
 import { trimStart } from 'lodash';
 import { ToolType } from '@kbn/agent-builder-common';
+import { CONNECTOR_TAG_PREFIX } from '@kbn/agent-builder-common/attachments';
 import { toolIdMaxLength } from '@kbn/agent-builder-common/tools';
 import type { Logger } from '@kbn/logging';
 import type { WorkflowYaml } from '@kbn/workflows';
@@ -24,7 +25,6 @@ import type { SmlIndexAction } from '../sml';
 import type { ServiceManager } from '..';
 
 const TEMPLATE_DELIMITERS: OpeningAndClosingTags = ['<%=', '%>'];
-const CONNECTOR_TAG_PREFIX = 'connector:';
 
 type SmlIndexAttachmentFn = (params: {
   request: KibanaRequest;

@@ -12,11 +12,10 @@ import type { Logger } from '@kbn/logging';
 import type { SmlTypeDefinition } from '@kbn/agent-builder-plugin/server';
 import type { ToolRegistry } from '@kbn/agent-builder-server';
 import type { ConnectorAttachmentData } from '@kbn/agent-builder-common/attachments';
-import { AttachmentType } from '@kbn/agent-builder-common/attachments';
+import { AttachmentType, CONNECTOR_TAG_PREFIX } from '@kbn/agent-builder-common/attachments';
 import { getConnectorSpec, getWorkflowTemplatesForConnector } from '@kbn/connector-specs';
 
 const CONNECTOR_SML_TYPE = 'connector';
-const CONNECTOR_TAG_PREFIX = 'connector:';
 
 interface ConnectorSmlTypeDeps {
   getToolRegistry: (request: KibanaRequest) => Promise<ToolRegistry>;
@@ -87,7 +86,7 @@ export const createConnectorSmlType = (deps: ConnectorSmlTypeDeps): SmlTypeDefin
           .filter((t) => t.hasAgentBuilderToolTag && t.description)
           .map((t) => t.description!);
 
-        const contentParts = [name, displayName, description, ...toolDescriptions].filter(Boolean);
+        const contentParts = [...new Set([name, displayName, description, ...toolDescriptions].filter(Boolean))];
 
         return {
           chunks: [
@@ -140,7 +139,7 @@ export const createConnectorSmlType = (deps: ConnectorSmlTypeDeps): SmlTypeDefin
 
         return {
           type: AttachmentType.connector,
-          data: data as unknown as Record<string, unknown>,
+          data,
         };
       } catch (error) {
         logger.warn(

@@ -141,6 +141,30 @@ describe('connectorSmlType', () => {
       );
     });
 
+    it('deduplicates content parts when name and displayName overlap', async () => {
+      mockSavedObjectsClient.get.mockResolvedValue({
+        id: 'conn-1',
+        type: 'action',
+        attributes: { name: 'MCP', actionTypeId: '.mcp' },
+        references: [],
+      });
+
+      getConnectorSpec.mockReturnValue({
+        metadata: {
+          id: '.mcp',
+          displayName: 'MCP',
+          description: 'Model Context Protocol connector',
+        },
+      });
+
+      getWorkflowTemplatesForConnector.mockReturnValue([]);
+
+      const result = await connectorSmlType.getSmlData!('conn-1', createContext() as never);
+
+      // 'MCP' should appear only once even though name === displayName
+      expect(result!.chunks[0].content).toBe('MCP\nModel Context Protocol connector');
+    });
+
     it('handles missing optional fields gracefully', async () => {
       mockSavedObjectsClient.get.mockResolvedValue({
         id: 'conn-1',

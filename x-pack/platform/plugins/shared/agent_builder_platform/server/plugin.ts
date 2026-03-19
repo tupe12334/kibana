@@ -30,12 +30,9 @@ export class AgentBuilderPlatformPlugin
     >
 {
   private logger: Logger;
-  // @ts-expect-error unused for now
-  private config: AgentBuilderConfig;
 
   constructor(context: PluginInitializerContext<PluginConfig>) {
     this.logger = context.logger.get();
-    this.config = context.config.get();
   }
 
   setup(

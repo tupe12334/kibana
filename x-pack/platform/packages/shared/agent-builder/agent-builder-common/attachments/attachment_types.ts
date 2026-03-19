@@ -131,6 +131,12 @@ export interface VisualizationAttachmentData {
   time_range?: { from: string; to: string };
 }
 
+/**
+ * Tag prefix used to associate tools with their parent connector instance.
+ * A tool tagged `connector:<connectorId>` belongs to that connector.
+ */
+export const CONNECTOR_TAG_PREFIX = 'connector:';
+
 export const connectorAttachmentToolSchema = z.object({
   id: z.string(),
   description: z.string(),
